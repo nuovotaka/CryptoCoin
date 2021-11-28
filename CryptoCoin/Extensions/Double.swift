@@ -18,7 +18,7 @@ extension Double {
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
         formatter.locale = .current // <- default value
-        formatter.currencyCode = "jyp" // <- change currency
+        formatter.currencyCode = "jpy" // <- change currency
         formatter.currencySymbol = "￥" // <- change currency symbol
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
@@ -31,7 +31,7 @@ extension Double {
     /// ```
     func asCurrencyWith2Decimals() -> String {
         let number = NSNumber(value: self)
-        return currencyFormatter2.string(from: number) ?? "$0.00"
+        return currencyFormatter2.string(from: number) ?? "￥0.00"
     }
 
     
@@ -46,7 +46,7 @@ extension Double {
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
         formatter.locale = .current // <- default value
-        formatter.currencyCode = "jyp" // <- change currency
+        formatter.currencyCode = "jpy" // <- change currency
         formatter.currencySymbol = "￥" // <- change currency symbol
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 6
@@ -61,7 +61,7 @@ extension Double {
     /// ```
     func asCurrencyWith6Decimals() -> String {
         let number = NSNumber(value: self)
-        return currencyFormatter6.string(from: number) ?? "$0.00"
+        return currencyFormatter6.string(from: number) ?? "￥0.00"
     }
     
     /// Converts a Double into string representation
