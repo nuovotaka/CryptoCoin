@@ -76,7 +76,7 @@ extension HomeView {
     private var homeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                .animation(.none)
+                .animation(.none, value: showPortfolio)
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
@@ -196,7 +196,7 @@ extension HomeView {
                 Image(systemName: "goforward")
             })
                 .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
-                .animation(.linear(duration: 1))
+                .animation(.linear(duration: 1), value: vm.isLoading)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
