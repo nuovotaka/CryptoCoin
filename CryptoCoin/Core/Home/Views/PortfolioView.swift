@@ -85,7 +85,7 @@ extension PortfolioView {
         
         if let portfolioCoin = vm.portfolioCoins.first(where: { $0.id == coin.id }),
            let amount = portfolioCoin.currentHoldings {
-            quantityText = "\(amount)"
+            quantityText = String(format: "%.8f", amount)
         } else {
             quantityText = ""
         }
